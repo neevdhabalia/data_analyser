@@ -60,5 +60,5 @@ if uploaded_file is not None:
         ax.set_title(f"{col1} vs {col2}")
     
         st.pyplot(fig)
-   else:
+    else:
         st.write("Scatter plot only for numeric columns.")
