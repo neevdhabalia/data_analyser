@@ -47,3 +47,18 @@ if uploaded_file is not None:
     else:
     	st.write("Please select numeric columns only.")
     
+    
+    st.write("### Scatter Plot")
+
+    if df[col1].dtype != 'object' and df[col2].dtype != 'object':
+        fig, ax = plt.subplots(figsize=(8,5))
+    
+        ax.scatter(df[col1], df[col2])
+    
+        ax.set_xlabel(col1)
+        ax.set_ylabel(col2)
+        ax.set_title(f"{col1} vs {col2}")
+    
+        st.pyplot(fig)
+   else:
+        st.write("Scatter plot only for numeric columns.")
